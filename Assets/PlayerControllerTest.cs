@@ -268,25 +268,28 @@ public class PlayerControllerTest : MonoBehaviour
         }
     }
 
+   
     void HandleMovement(bool isCharging)
     {
-        float target = inputX * moveSpeed;
-        float currentAccel = (Mathf.Abs(target) > 0.01f) ? accel : decel;
+        float targetSpeed = inputX * moveSpeed;
+        float speedDiff = targetSpeed - rb.linearVelocity.x;
 
-        // Reduce acceleration slightly while charging, but don't stop movement
+        // Different accel values for ground vs air
+        float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? accel : decel;
+        if (!grounded) accelRate *= airControl;
+
+        // Extra snappiness → higher decel than accel
+        if (Mathf.Abs(targetSpeed) < 0.01f)
+            accelRate *= 1.5f; // stop quicker than you start
+
+        // Reduce accel slightly while charging
         if (isCharging)
-        {
-            currentAccel *= 0.7f;
-        }
+            accelRate *= 0.7f;
 
-        // Apply different acceleration in air vs ground
-        if (!grounded)
-        {
-            currentAccel *= airControl;
-        }
+        // Calculate new velocity with smoothing
+        float movement = Mathf.MoveTowards(rb.linearVelocity.x, targetSpeed, accelRate * Time.fixedDeltaTime);
 
-        float speed = Mathf.MoveTowards(rb.linearVelocity.x, target, currentAccel * Time.fixedDeltaTime);
-        rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(movement, rb.linearVelocity.y);
     }
 
     void StartDash()

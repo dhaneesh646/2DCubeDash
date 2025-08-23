@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
 
     [Header("FX Hooks")]
-    [SerializeField] TrailRenderer dashTrail;
+    // [SerializeField] TrailRenderer dashTrail;
     [SerializeField] ParticleSystem landDust;
 
     // Component references
@@ -268,25 +268,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     void HandleMovement(bool isCharging)
     {
-        float target = inputX * moveSpeed;
-        float currentAccel = (Mathf.Abs(target) > 0.01f) ? accel : decel;
+        float targetSpeed = inputX * moveSpeed;
+        float speedDiff = targetSpeed - rb.linearVelocity.x;
 
-        // Reduce acceleration slightly while charging, but don't stop movement
+        // Different accel values for ground vs air
+        float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? accel : decel;
+        if (!grounded) accelRate *= airControl;
+
+        // Extra snappiness → higher decel than accel
+        if (Mathf.Abs(targetSpeed) < 0.01f)
+            accelRate *= 1.5f; // stop quicker than you start
+
+        // Reduce accel slightly while charging
         if (isCharging)
-        {
-            currentAccel *= 0.7f;
-        }
+            accelRate *= 0.7f;
 
-        // Apply different acceleration in air vs ground
-        if (!grounded)
-        {
-            currentAccel *= airControl;
-        }
+        // Calculate new velocity with smoothing
+        float movement = Mathf.MoveTowards(rb.linearVelocity.x, targetSpeed, accelRate * Time.fixedDeltaTime);
 
-        float speed = Mathf.MoveTowards(rb.linearVelocity.x, target, currentAccel * Time.fixedDeltaTime);
-        rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(movement, rb.linearVelocity.y);
     }
 
     void StartDash()
@@ -307,7 +310,6 @@ public class PlayerController : MonoBehaviour
     {
         isDashing = false;
         rb.gravityScale = defaultGravity;
-        if (dashTrail) dashTrail.emitting = false;
         LeanScale(Vector3.one, 0.08f);
     }
 
@@ -342,5 +344,10 @@ public class PlayerController : MonoBehaviour
         if (groundCheck == null) return;
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
+    }
+    
+    public bool Grounded()
+    {
+        return grounded;
     }
 }
