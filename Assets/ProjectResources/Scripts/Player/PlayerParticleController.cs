@@ -5,20 +5,21 @@ public class PlayerParticleController : MonoBehaviour
 
     [SerializeField] ParticleSystem[] movementParticleSystem;
     [SerializeField] ParticleSystem fallParticleSystem;
+    [SerializeField] ParticleSystem dieParticleSystem;
     [Range(0, 10)]
     [SerializeField] int occurAfterVelocity;
 
     [Range(0, 0.2f)]
     [SerializeField] float dustParticleInterval;
     Rigidbody2D rb;
-    PlayerControllerTest playerController;
+    PlayerController playerController;
 
 
     float counter;
 
     void Start()
     {
-        playerController = GetComponent<PlayerControllerTest>();
+        playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
     }
     void Update()
@@ -47,6 +48,15 @@ public class PlayerParticleController : MonoBehaviour
         if (fallParticleSystem != null)
         {
             fallParticleSystem.Play();
+        }
+    }
+
+    public void Die(Transform pos)
+    {
+        if (dieParticleSystem != null)
+        {
+            playerController.chargeCanvas.SetActive(false);
+            dieParticleSystem.Play();
         }
     }
 

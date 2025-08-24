@@ -5,7 +5,8 @@ public class Hazard : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Dead");
         if (!other.CompareTag("Player")) return;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.Instance.PlayerDied(other.gameObject);
     }
 }

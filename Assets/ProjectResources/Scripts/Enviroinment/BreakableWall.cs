@@ -24,7 +24,7 @@ public class BreakableWall : MonoBehaviour
         if (broken) return;
         if (!c.collider.CompareTag("Player")) return;
 
-        var player = c.collider.GetComponent<PlayerControllerTest>();
+        var player = c.collider.GetComponent<PlayerController>();
         if (player == null) return;
 
         // Contact point & normal for directional burst
@@ -68,6 +68,9 @@ public class BreakableWall : MonoBehaviour
                 rb.AddTorque(Random.Range(-shardTorque, shardTorque), ForceMode2D.Impulse);
             }
         }
+
+        if (CameraShake.Instance != null)
+            CameraShake.Instance.Shake(0.2f, 0.15f);
 
         // Dust
         if (breakDustFX) Instantiate(breakDustFX, contactPoint, Quaternion.identity);

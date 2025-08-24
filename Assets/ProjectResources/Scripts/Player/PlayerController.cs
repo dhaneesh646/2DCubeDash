@@ -20,40 +20,57 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxChargeTime = 1f;
     [SerializeField] float maxChargedJumpForce = 20f;
     [SerializeField] float minChargeTime = 0.3f; // Minimum hold time for charged jump
-    [SerializeField] Slider chargeSlider;
+    [SerializeField]  Image chargeFillImage;
+    [SerializeField] public GameObject chargeCanvas;
     [SerializeField] float chargedJumpStaminaCost = 30f;
 
     [Header("Dash")]
     [SerializeField] float dashSpeed = 20f;
     [SerializeField] float dashTime = 0.12f;
-    [SerializeField] float dashStaminaCost = 20f; // NEW - stamina cost per dash
-    [SerializeField] float dashMinDelay = 0.05f; // tiny delay between dashes
+    [SerializeField] float dashStaminaCost = 20f;
+    [SerializeField] float dashMinDelay = 0.05f;
 
     [Header("Ground Check")]
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundRadius = 0.15f;
     [SerializeField] LayerMask groundLayer;
 
+    [Header("Landing Effects")]
+    [SerializeField] float maxLandingSquash = 0.7f; // How much the cube squashes on landing
+    [SerializeField] float landingSquashDuration = 0.15f; // How long the squash effect lasts
+    [SerializeField] float minLandingVelocity = 5f; // Minimum fall speed to trigger squash effect
+    [SerializeField] ParticleSystem landingImpactParticles; // Particles to play on hard landing
+
     [Header("FX Hooks")]
     [SerializeField] TrailRenderer dashTrail;
     [SerializeField] ParticleSystem landDust;
+
     [Header("Wheels")]
     [SerializeField] Transform[] wheels;   // Assign wheel sprites in inspector
     [SerializeField] float wheelRadius = 0.5f; // radius in Unity units
 
     // Component references
     private Rigidbody2D rb;
+    private BoxCollider2D col;
     private StaminaController staminaController;
+    private PlayerParticleController particleController;
+
 
     // State variables
     private float inputX;
     private bool grounded;
+    private bool wasGrounded; // Track previous grounded state
     private float lastGroundedTime;
     private float lastJumpPressedTime;
     private bool isDashing;
     private float dashEndTime;
     private float nextDashTime;
     private float defaultGravity;
+    private Vector3 originalScale; // Store the cube's original scale
+
+    // Landing impact variables
+    private float landingImpactVelocity; // How fast we were falling when we landed
+    private bool isLanding; // Are we currently in a landing animation
 
     // Charged jump variables
     private float chargeStartTime;
@@ -64,17 +81,22 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<BoxCollider2D>();
         staminaController = GetComponent<StaminaController>();
+        particleController = GetComponent<PlayerParticleController>();
         defaultGravity = rb.gravityScale;
         dashTrail.emitting = false;
+        originalScale = transform.localScale; // Store the original scale
 
         // Hide charge slider initially
-        if (chargeSlider != null)
-            chargeSlider.gameObject.SetActive(false);
+        if (chargeFillImage != null)
+            chargeFillImage.gameObject.SetActive(false);
     }
 
     void Update()
     {
+        // Store previous grounded state before checking
+
         // input
         inputX = Input.GetAxisRaw("Horizontal");
 
@@ -83,6 +105,16 @@ public class PlayerController : MonoBehaviour
 
         // ground check
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+
+        // Check for landing impact
+        if (grounded && !wasGrounded)
+        {
+            OnLanding();
+            particleController.Landed();
+        }
+        wasGrounded = grounded;
+
+
         if (grounded) lastGroundedTime = Time.time;
 
         // jump execution (normal jump only)
@@ -114,7 +146,78 @@ public class PlayerController : MonoBehaviour
             EndDash();
 
         // Update charge slider
-        UpdateChargeSlider();
+        UpdatechargeFillImage();
+    }
+
+    void OnLanding()
+    {
+        // Calculate how fast we were falling (negative Y velocity)
+        float fallSpeed = Mathf.Abs(Mathf.Min(0, rb.linearVelocity.y));
+        landingImpactVelocity = fallSpeed;
+
+        // Only trigger landing effects if we fell fast enough
+        if (fallSpeed >= minLandingVelocity)
+        {
+            isLanding = true;
+
+            // Calculate squash amount based on fall speed (more speed = more squash)
+            float squashAmount = Mathf.Clamp(fallSpeed / 15f, 0.1f, maxLandingSquash);
+
+            // Apply squash effect
+            Vector3 squashScale = new Vector3(
+                originalScale.x * (1f + squashAmount * 0.3f), // Wider
+                originalScale.y * (1f - squashAmount),        // Shorter
+                originalScale.z                               // Depth unchanged
+            );
+
+            // Start the landing animation
+            StartCoroutine(LandingSquash(squashScale));
+
+            // Play landing particles based on impact strength
+            if (landDust != null)
+            {
+                var emission = landDust.emission;
+                emission.rateOverTime = Mathf.Lerp(5f, 30f, squashAmount / maxLandingSquash);
+                landDust.Play();
+            }
+
+            // Play impact particles for hard landings
+            if (landingImpactParticles != null && fallSpeed > minLandingVelocity * 1.5f)
+            {
+                landingImpactParticles.Play();
+            }
+        }
+    }
+
+    System.Collections.IEnumerator LandingSquash(Vector3 targetScale)
+    {
+        float elapsed = 0f;
+        Vector3 startScale = transform.localScale;
+
+        // Squash down
+        while (elapsed < landingSquashDuration / 2f)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / (landingSquashDuration / 2f);
+            transform.localScale = Vector3.Lerp(startScale, targetScale, t);
+            yield return null;
+        }
+
+        // Return to normal scale
+        elapsed = 0f;
+        startScale = transform.localScale;
+
+        while (elapsed < landingSquashDuration / 2f)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / (landingSquashDuration / 2f);
+            transform.localScale = Vector3.Lerp(startScale, originalScale, t);
+            yield return null;
+        }
+
+        // Ensure we're back to exact original scale
+        transform.localScale = originalScale;
+        isLanding = false;
     }
 
     void HandleJumpInput()
@@ -173,10 +276,11 @@ public class PlayerController : MonoBehaviour
         currentCharge = 0f;
 
         // Show charge slider
-        if (chargeSlider != null)
+        if (chargeFillImage != null)
         {
-            chargeSlider.gameObject.SetActive(true);
-            chargeSlider.value = 0f;
+            chargeCanvas.SetActive(true);
+            chargeFillImage.gameObject.SetActive(true);
+            chargeFillImage.fillAmount = 0f;
         }
 
         // Only slightly reduce movement while charging
@@ -190,7 +294,7 @@ public class PlayerController : MonoBehaviour
         currentCharge = Mathf.Clamp01((holdTime - minChargeTime) / (maxChargeTime - minChargeTime));
 
         // Consume stamina while charging
-        if (chargeSlider.value != 1)
+        if (chargeFillImage.fillAmount != 1)
         {
             staminaController.ConsumeStaminaOverTime();
         }
@@ -208,7 +312,6 @@ public class PlayerController : MonoBehaviour
             // Calculate jump force based on charge
             float chargeFactor = Mathf.Clamp01((holdTime - minChargeTime) / (maxChargeTime - minChargeTime));
             float chargedJumpForce = Mathf.Lerp(jumpForce, maxChargedJumpForce, chargeFactor);
-
 
             PerformJump(chargedJumpForce);
         }
@@ -238,8 +341,8 @@ public class PlayerController : MonoBehaviour
         staminaController.StopConsumption();
 
         // Hide charge slider
-        if (chargeSlider != null)
-            chargeSlider.gameObject.SetActive(false);
+        if (chargeFillImage != null)
+            chargeFillImage.gameObject.SetActive(false);
     }
 
     void PerformJump(float force)
@@ -249,25 +352,27 @@ public class PlayerController : MonoBehaviour
 
         // Continue horizontal movement after jump
         HandleMovement(false);
+
+        // Small scale effect when jumping
+        LeanScale(new Vector3(0.9f, 1.1f, 1f), 0.1f);
     }
 
-    void UpdateChargeSlider()
+    void UpdatechargeFillImage()
     {
-        if (isChargingJump && chargeSlider != null)
+        if (isChargingJump && chargeFillImage != null)
         {
-            chargeSlider.value = currentCharge;
+            chargeFillImage.fillAmount = currentCharge;
         }
     }
 
     void FixedUpdate()
     {
-        if (!isChargingJump)
+        if (!isChargingJump && !isLanding)
         {
             HandleMovement(false);
         }
         RotateWheels();
     }
-
 
     void HandleMovement(bool isCharging)
     {
@@ -309,13 +414,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     void StartDash()
     {
         isDashing = true;
         dashTrail.emitting = isDashing;
         dashEndTime = Time.time + dashTime;
-        nextDashTime = Time.time + dashMinDelay; // no cooldown, just a small delay
+        nextDashTime = Time.time + dashMinDelay;
 
         float dir = Mathf.Sign(Mathf.Abs(inputX) > 0.01f ? inputX : transform.localScale.x);
         rb.linearVelocity = new Vector2(dir * dashSpeed, 0f);
@@ -323,6 +427,9 @@ public class PlayerController : MonoBehaviour
 
         // no stamina regen while dashing
         staminaController.StopConsumption();
+
+        // Dash stretch effect
+        LeanScale(new Vector3(1.2f, 0.8f, 1f), 0.1f);
     }
 
     void EndDash()
@@ -333,15 +440,8 @@ public class PlayerController : MonoBehaviour
         LeanScale(Vector3.one, 0.08f);
     }
 
-    void OnCollisionEnter2D(Collision2D c)
-    {
-        if (c.collider.IsTouchingLayers(groundLayer))
-        {
 
-        }
-    }
 
-    // lightweight tween for scale (no packages)
     void LeanScale(Vector3 target, float time)
     {
         StopAllCoroutines();

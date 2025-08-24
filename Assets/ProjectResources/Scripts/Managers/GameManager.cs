@@ -1,16 +1,61 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static GameManager Instance;
+
+    private Vector2 respawnPoint;
+    [SerializeField] private Transform defaultSpawnPoint;
+    [SerializeField] PlayerParticleController playerParticles;
+
+    private Coroutine dieCoroutine;
+
+    void Awake()
     {
-        
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+
+        respawnPoint = defaultSpawnPoint ? defaultSpawnPoint.position : Vector2.zero;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetRespawnPoint(Vector2 pos)
     {
+        Debug.Log("Set Respawn Point: " + pos);
+        respawnPoint = pos;
+    }
+
+    public void PlayerDied(GameObject player)
+    {
+        if (dieCoroutine != null)
+        {
+            StopCoroutine(dieCoroutine);
+        }
+        StartCoroutine(RespawnPlayer(player));
+    }
+
+    public IEnumerator RespawnPlayer(GameObject player)
+    {
+        foreach (var sr in player.GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.enabled = false;
+        }
         
+
+        playerParticles.Die(player.transform);
+
+        yield return new WaitForSeconds(1.5f);
+        player.transform.position = respawnPoint;
+        var rb = player.GetComponent<Rigidbody2D>();
+        if (rb) rb.linearVelocity = Vector2.zero;
+
+        var stamina = player.GetComponent<StaminaController>();
+        if (stamina) stamina.StopConsumption();
+        foreach (var sr in player.GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.enabled = true;
+        }
+
     }
 }
