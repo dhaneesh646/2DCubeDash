@@ -2,30 +2,38 @@ using UnityEngine;
 
 public class PlayerParticleController : MonoBehaviour
 {
-    [SerializeField] ParticleSystem movementParticleSystem;
+
+    [SerializeField] ParticleSystem[] movementParticleSystem;
     [SerializeField] ParticleSystem fallParticleSystem;
     [Range(0, 10)]
     [SerializeField] int occurAfterVelocity;
 
     [Range(0, 0.2f)]
     [SerializeField] float dustParticleInterval;
-    [SerializeField] Rigidbody2D rb;
-    private bool isGrounded;
+    Rigidbody2D rb;
+    PlayerControllerTest playerController;
+
 
     float counter;
 
-    
-
-
+    void Start()
+    {
+        playerController = GetComponent<PlayerControllerTest>();
+        rb = GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
         counter += Time.deltaTime;
         if (rb != null)
         {
-            if (isGrounded && Mathf.Abs(rb.linearVelocity.x) > occurAfterVelocity && counter >= dustParticleInterval)
+            if (playerController.Grounded() && Mathf.Abs(rb.linearVelocity.x) > occurAfterVelocity && counter >= dustParticleInterval)
             {
-                movementParticleSystem.Play();
-                counter = 0;
+                foreach (var movementParticleSystem in movementParticleSystem)
+                    if (movementParticleSystem != null)
+                    {
+                        movementParticleSystem.Play();
+                        counter = 0;
+                    }
             }
         }
         else
@@ -34,27 +42,37 @@ public class PlayerParticleController : MonoBehaviour
         }
     }
 
-    
-
-    void OnTriggerEnter2D(Collider2D collision)
+    public void Landed()
     {
-        if (collision.CompareTag("Ground"))
+        if (fallParticleSystem != null)
         {
-            Debug.Log("Grounded");
-            isGrounded = true;
-            if (fallParticleSystem != null)
-            {
-                fallParticleSystem.Play();
-            }
+            fallParticleSystem.Play();
         }
     }
 
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Ground"))
-        {
-            Debug.Log("Not Grounded");
-            isGrounded = false;
-        }
-    }
+
+
+
+
+    // void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     if (collision.CompareTag("Ground"))
+    //     {
+    //         Debug.Log("Grounded");
+    //         isGrounded = true;
+    //         if (fallParticleSystem != null)
+    //         {
+    //             fallParticleSystem.Play();
+    //         }
+    //     }
+    // }
+
+    // void OnTriggerExit2D(Collider2D collision)
+    // {
+    //     if (collision.CompareTag("Ground"))
+    //     {
+    //         Debug.Log("Not Grounded");
+    //         isGrounded = false;
+    //     }
+    // }
 }

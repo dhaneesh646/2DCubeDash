@@ -35,12 +35,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
 
     [Header("FX Hooks")]
-    // [SerializeField] TrailRenderer dashTrail;
+    [SerializeField] TrailRenderer dashTrail;
     [SerializeField] ParticleSystem landDust;
+    [Header("Wheels")]
+    [SerializeField] Transform[] wheels;   // Assign wheel sprites in inspector
+    [SerializeField] float wheelRadius = 0.5f; // radius in Unity units
 
     // Component references
     private Rigidbody2D rb;
-    private BoxCollider2D col;
     private StaminaController staminaController;
 
     // State variables
@@ -62,9 +64,9 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<BoxCollider2D>();
         staminaController = GetComponent<StaminaController>();
         defaultGravity = rb.gravityScale;
+        dashTrail.emitting = false;
 
         // Hide charge slider initially
         if (chargeSlider != null)
@@ -259,13 +261,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isDashing) return;
-
-        // Handle movement (unless we're charging, which handles its own movement)
         if (!isChargingJump)
         {
             HandleMovement(false);
         }
+        RotateWheels();
     }
 
 
@@ -292,9 +292,28 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = new Vector2(movement, rb.linearVelocity.y);
     }
 
+    void RotateWheels()
+    {
+        if (wheels == null || wheels.Length == 0) return;
+
+        // Only rotate wheels when on the ground OR dashing
+        if (!grounded && !isDashing) return;
+
+        // Angular speed = v / r
+        float angularSpeed = rb.linearVelocity.x / wheelRadius;
+        float rotationAmount = angularSpeed * Mathf.Rad2Deg * Time.fixedDeltaTime;
+
+        foreach (Transform wheel in wheels)
+        {
+            wheel.Rotate(Vector3.forward, -rotationAmount);
+        }
+    }
+
+
     void StartDash()
     {
         isDashing = true;
+        dashTrail.emitting = isDashing;
         dashEndTime = Time.time + dashTime;
         nextDashTime = Time.time + dashMinDelay; // no cooldown, just a small delay
 
@@ -309,14 +328,17 @@ public class PlayerController : MonoBehaviour
     void EndDash()
     {
         isDashing = false;
+        dashTrail.emitting = isDashing;
         rb.gravityScale = defaultGravity;
         LeanScale(Vector3.one, 0.08f);
     }
 
     void OnCollisionEnter2D(Collision2D c)
     {
-        if (landDust != null && c.collider.IsTouchingLayers(groundLayer))
-            landDust.Play();
+        if (c.collider.IsTouchingLayers(groundLayer))
+        {
+
+        }
     }
 
     // lightweight tween for scale (no packages)
@@ -345,9 +367,7 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
     }
-    
-    public bool Grounded()
-    {
-        return grounded;
-    }
+
+    public bool Grounded() => grounded;
+    public bool IsDashing() => isDashing;
 }

@@ -11,6 +11,7 @@ public class StaminaController : MonoBehaviour
     
     [Header("UI References")]
     [SerializeField] Slider staminaSlider;
+    [SerializeField] Image staminaFillImage;
     
     private float currentStamina;
     private float lastConsumptionTime;
@@ -82,9 +83,11 @@ public class StaminaController : MonoBehaviour
     
     private void UpdateStaminaUI()
     {
-        if (staminaSlider != null)
+        if (staminaFillImage != null)
         {
-            staminaSlider.value = StaminaPercentage;
+            // staminaSlider.value = StaminaPercentage;
+            staminaFillImage.color = Color.Lerp(Color.red, Color.green, StaminaPercentage);
+            staminaFillImage.fillAmount = StaminaPercentage;
         }
     }
     
