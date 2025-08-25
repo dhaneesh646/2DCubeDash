@@ -4,12 +4,11 @@ using UnityEngine;
 public class BreakableWall : MonoBehaviour
 {
     [Header("Break Rules")]
-    [SerializeField] float breakVelocityThreshold = 14f;   // non-dash impact speed
+    [SerializeField] float breakVelocityThreshold = 14f;
     [SerializeField] bool dashAlwaysBreaks = true;
 
     [Header("Prefabs / FX")]
-    [SerializeField] GameObject brokenWallPrefab; // PF_BrokenWall (with shards)
-    [SerializeField] AudioClip breakSFX;
+    [SerializeField] GameObject brokenWallPrefab; 
 
     [Header("Shards Impulse")]
     [SerializeField] float shardForceMin = 4f;
@@ -26,19 +25,16 @@ public class BreakableWall : MonoBehaviour
         var player = c.collider.GetComponent<PlayerController>();
         if (player == null) return;
 
-        // Contact point & normal for directional burst
         var contact = c.contacts.Length > 0 ? c.contacts[0] : default;
         var point = contact.point;
-        var normal = contact.normal; // points out of the wall
+        var normal = contact.normal; 
 
-        // Rule 1: dash can always break (if enabled)
         if (dashAlwaysBreaks && player.IsDashing())
         {
             Break(point, normal);
             return;
         }
 
-        // Rule 2: otherwise, require impact velocity
         if (Mathf.Abs(c.relativeVelocity.x) >= breakVelocityThreshold ||
             Mathf.Abs(c.relativeVelocity.y) >= breakVelocityThreshold)
         {
@@ -50,7 +46,6 @@ public class BreakableWall : MonoBehaviour
     {
         broken = true;
 
-        // Spawn shards and push them away from the hit
         if (brokenWallPrefab)
         {
             var shardsRoot = Instantiate(brokenWallPrefab, transform.position, transform.rotation);
@@ -58,7 +53,6 @@ public class BreakableWall : MonoBehaviour
 
             foreach (var rb in rbs)
             {
-                // Direction: away from the contact point with a bit of random spread
                 Vector2 dir = ((Vector2)rb.worldCenterOfMass - contactPoint).normalized;
                 dir = (dir + Random.insideUnitCircle * 0.25f).normalized;
 
@@ -68,11 +62,6 @@ public class BreakableWall : MonoBehaviour
             }
         }
 
-
-        // SFX
-        if (breakSFX) AudioSource.PlayClipAtPoint(breakSFX, transform.position);
-
-        // Remove intact wall
         Destroy(gameObject);
     }
 }

@@ -14,7 +14,7 @@ public class ParallelWorldMaskController : MonoBehaviour
     private float currentEnergy;
 
     [Header("Input Settings")]
-    public KeyCode toggleKey = KeyCode.E; // 👈 Toggle key for ability
+    public KeyCode toggleKey = KeyCode.E;
 
     [Header("UI")]
     public Image energyBar;
@@ -73,7 +73,7 @@ public class ParallelWorldMaskController : MonoBehaviour
             if (currentEnergy <= 0f)
             {
                 currentEnergy = 0f;
-                StopReveal(); // 👈 Auto-disable if energy runs out
+                StopReveal();
             }
         }
         else

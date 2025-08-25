@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
@@ -15,7 +14,6 @@ public class MovingPlatform : MonoBehaviour
     void Start()
     {
         GameManager.Instance.OnLevelStatusUpdated += UpdateLevelStatus;
-        
     }
 
     void UpdateLevelStatus(bool isOver)

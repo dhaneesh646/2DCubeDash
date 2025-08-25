@@ -5,12 +5,11 @@ public class StaminaController : MonoBehaviour
 {
     [Header("Stamina Settings")]
     [SerializeField] float maxStamina = 100f;
-    [SerializeField] float staminaConsumptionRate = 25f; // per second
-    [SerializeField] float staminaRegenerationRate = 15f; // per second
-    [SerializeField] float regenerationDelay = 1f; // seconds before regeneration starts
+    [SerializeField] float staminaConsumptionRate = 25f;
+    [SerializeField] float staminaRegenerationRate = 15f;
+    [SerializeField] float regenerationDelay = 1f;
 
     [Header("UI References")]
-    [SerializeField] Slider staminaSlider;
     [SerializeField] Image staminaFillImage;
 
     private float currentStamina;
@@ -91,13 +90,11 @@ public class StaminaController : MonoBehaviour
     {
         if (staminaFillImage != null)
         {
-            // staminaSlider.value = StaminaPercentage;
             staminaFillImage.color = Color.Lerp(Color.red, Color.green, StaminaPercentage);
             staminaFillImage.fillAmount = StaminaPercentage;
         }
     }
 
-    // For external queries
     public bool HasStaminaForAction(float requiredPercentage = 0.1f)
     {
         return StaminaPercentage >= requiredPercentage;

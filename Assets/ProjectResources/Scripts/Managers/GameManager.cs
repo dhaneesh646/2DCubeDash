@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     private Coroutine dieCoroutine;
     public Action<bool> OnLevelStatusUpdated;
     public Action OnPlayerRespawn;
+    public Action OnPlayerDeath;
+    public Action<GameObject> PlayerKilled;
 
     void Awake()
     {
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
 
         respawnPoint = defaultSpawnPoint ? defaultSpawnPoint.position : Vector2.zero;
+        PlayerKilled = PlayerDied;
     }
 
     public void SetRespawnPoint(Vector2 pos)
@@ -45,8 +48,10 @@ public class GameManager : MonoBehaviour
         {
             sr.enabled = false;
         }
+        
         if (isPlayerAlive)
         {
+            OnPlayerDeath?.Invoke();
             playerParticles.Die(player.transform);
             isPlayerAlive = false;
         }

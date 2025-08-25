@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: baf008f1b1af8ea45a4340b00e5a8dc9
+guid: 7532cca5d8d72614bba740843999f1da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6901359675524193606
-    second: Design a stylized sq_0
+      213: 2975462630149103030
+    second: CubeFace-Photoroom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Design a stylized sq_0
+      name: CubeFace-Photoroom_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 670
-        height: 710
+        width: 1019
+        height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab2ec29a0f17930a0800000000000000
-      internalID: -6901359675524193606
+      spriteID: 6bd9c785f77fa4920800000000000000
+      internalID: 2975462630149103030
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0453a0e0c22505f4480e29d420992229
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Design a stylized sq_0: -6901359675524193606
+      CubeFace-Photoroom_0: 2975462630149103030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

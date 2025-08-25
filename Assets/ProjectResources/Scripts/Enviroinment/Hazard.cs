@@ -7,6 +7,6 @@ public class Hazard : MonoBehaviour
     {
         Debug.Log("Dead");
         if (!other.CompareTag("Player")) return;
-        GameManager.Instance.PlayerDied(other.gameObject);
+        GameManager.Instance.PlayerKilled?.Invoke(other.gameObject);
     }
 }

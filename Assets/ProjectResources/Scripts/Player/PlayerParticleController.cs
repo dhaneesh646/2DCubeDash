@@ -56,34 +56,7 @@ public class PlayerParticleController : MonoBehaviour
         if (dieParticleSystem != null)
         {
             AudioManager.Instance.PlayEffect(SoundEffect.PlayerDeath);
-            playerController.chargeCanvas.SetActive(false);
             dieParticleSystem.Play();
         }
     }
-
-
-
-
-
-    // void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     if (collision.CompareTag("Ground"))
-    //     {
-    //         Debug.Log("Grounded");
-    //         isGrounded = true;
-    //         if (fallParticleSystem != null)
-    //         {
-    //             fallParticleSystem.Play();
-    //         }
-    //     }
-    // }
-
-    // void OnTriggerExit2D(Collider2D collision)
-    // {
-    //     if (collision.CompareTag("Ground"))
-    //     {
-    //         Debug.Log("Not Grounded");
-    //         isGrounded = false;
-    //     }
-    // }
 }

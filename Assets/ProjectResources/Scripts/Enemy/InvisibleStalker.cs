@@ -8,8 +8,8 @@ public class InvisibleStalker : MonoBehaviour
     [SerializeField] float patrolSpeed = 2f;
 
     [Header("Enemy Settings")]
-    [SerializeField] float killRange = 1f; // Range to kill player
-    [SerializeField] ParticleSystem deathEffect; // Particle effect when enemy dies
+    [SerializeField] float killRange = 1f;
+    [SerializeField] ParticleSystem deathEffect;
 
     private Transform player;
     private Vector3 targetPoint;
@@ -37,14 +37,12 @@ public class InvisibleStalker : MonoBehaviour
 
         if (Vector2.Distance(transform.position, targetPoint) < 0.1f)
         {
-            // Flip target point
             targetPoint = targetPoint == pointA.position ? pointB.position : pointA.position;
         }
     }
 
     void UpdateFacingDirection()
     {
-        // Face the direction of movement
         if (spriteRenderer != null)
         {
             spriteRenderer.flipX = (targetPoint == pointA.position);
@@ -55,7 +53,6 @@ public class InvisibleStalker : MonoBehaviour
     {
         float dist = Vector2.Distance(transform.position, player.position);
 
-        // Kill player if they get too close (without dashing)
         if (dist < killRange)
         {
             PlayerController playerController = player.GetComponent<PlayerController>();
@@ -83,7 +80,7 @@ public class InvisibleStalker : MonoBehaviour
     void KillPlayer()
     {
         Debug.Log("Player killed by enemy!");
-        GameManager.Instance.PlayerDied(player.gameObject);
+        GameManager.Instance.PlayerKilled?.Invoke(player.gameObject);
     }
 
     void Die()

@@ -4,14 +4,11 @@ using System.Collections.Generic;
 
 public enum SoundEffect
 {
-    // Player sounds
     PlayerJump,
     PlayerDash,
     PlayerLand,
     PlayerDeath,
-    // Game events
     LevelComplete,
-    // Environment sounds
     HeartbeatWarning,
 
 }
@@ -22,7 +19,6 @@ public class Sound
     public SoundEffect effect;
     public AudioClip clip;
     [Range(0f, 1f)] public float volume = 1f;
-    [Range(0.1f, 3f)] public float pitch = 1f;
     public bool loop = false;
 }
 
@@ -50,7 +46,6 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        // Singleton pattern
         if (Instance == null)
         {
             Instance = this;
@@ -71,7 +66,6 @@ public class AudioManager : MonoBehaviour
         bgGameMusic.loop = true;
         bgGameMusic.Play();
 
-        // Configure heartbeat source
         heartbeatSource.loop = true;
         heartbeatSource.volume = 0f;
     }
@@ -104,10 +98,6 @@ public class AudioManager : MonoBehaviour
     {
         if (soundDictionary.TryGetValue(effect, out Sound sound))
         {
-            // source.volume = sound.volume;
-            // source.pitch = sound.pitch;
-            // source.loop = sound.loop;
-
             if (sound.loop)
             {
                 if (source.clip != sound.clip || !source.isPlaying)
@@ -124,23 +114,6 @@ public class AudioManager : MonoBehaviour
         else
         {
             Debug.LogWarning($"Sound effect not found: {effect}");
-        }
-    }
-
-    public void StopSoundEffect(SoundEffect effect)
-    {
-        // Check all sources for this sound and stop them
-        AudioSource[] sources = { sfxSource, heartbeatSource };
-
-        foreach (AudioSource source in sources)
-        {
-            if (source.isPlaying && soundDictionary.TryGetValue(effect, out Sound sound))
-            {
-                if (source.clip == sound.clip)
-                {
-                    source.Stop();
-                }
-            }
         }
     }
 
@@ -161,7 +134,6 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator UpdateHeartbeat()
     {
-        // Get or load heartbeat sound
 
         float bgTargetVolume = Mathf.Lerp(1f, 0.3f, currentHeartbeatIntensity);
         if (!soundDictionary.ContainsKey(SoundEffect.HeartbeatWarning))
@@ -172,18 +144,15 @@ public class AudioManager : MonoBehaviour
 
         Sound heartbeatSound = soundDictionary[SoundEffect.HeartbeatWarning];
 
-        // Ensure heartbeat source is configured
         heartbeatSource.clip = heartbeatSound.clip;
         heartbeatSource.volume = heartbeatSound.volume * currentHeartbeatIntensity;
         heartbeatSource.pitch = Mathf.Lerp(heartbeatMinPitch, heartbeatMaxPitch, currentHeartbeatIntensity);
 
-        // Start playing if not already
         if (!heartbeatSource.isPlaying)
         {
             heartbeatSource.Play();
         }
 
-        // Smoothly adjust volume and pitch
         float targetVolume = heartbeatSound.volume * currentHeartbeatIntensity * heartbeatMaxVolume;
         float targetPitch = Mathf.Lerp(heartbeatMinPitch, heartbeatMaxPitch, currentHeartbeatIntensity);
 
@@ -210,7 +179,6 @@ public class AudioManager : MonoBehaviour
         heartbeatSource.pitch = targetPitch;
         bgGameMusic.volume = bgTargetVolume;
 
-        // Stop if intensity is zero
         if (currentHeartbeatIntensity <= 0.01f && heartbeatSource.isPlaying)
         {
             heartbeatSource.Stop();
