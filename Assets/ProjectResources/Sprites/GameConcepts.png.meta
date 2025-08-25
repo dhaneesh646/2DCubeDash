@@ -1,0 +1,2223 @@
+fileFormatVersion: 2
+guid: f12d4c85af070f5408af23d99d707412
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6181941956482904370
+    second: GameConcepts_0
+  - first:
+      213: -6178891350466737468
+    second: GameConcepts_1
+  - first:
+      213: 4605337246255096380
+    second: GameConcepts_2
+  - first:
+      213: -541965855542191332
+    second: GameConcepts_3
+  - first:
+      213: -8618769091852027746
+    second: GameConcepts_4
+  - first:
+      213: 7739177166328121379
+    second: GameConcepts_5
+  - first:
+      213: 4702484118307183600
+    second: GameConcepts_6
+  - first:
+      213: -8311243261414425303
+    second: GameConcepts_7
+  - first:
+      213: 964293391827722164
+    second: GameConcepts_8
+  - first:
+      213: -6360863811660976050
+    second: GameConcepts_9
+  - first:
+      213: -4802894637913788644
+    second: GameConcepts_10
+  - first:
+      213: 2514615255138613495
+    second: GameConcepts_11
+  - first:
+      213: -1137959754573007738
+    second: GameConcepts_12
+  - first:
+      213: -397939585018721811
+    second: GameConcepts_13
+  - first:
+      213: 2042271078463884672
+    second: GameConcepts_14
+  - first:
+      213: -5957414131018193315
+    second: GameConcepts_15
+  - first:
+      213: -1550106776028577065
+    second: GameConcepts_16
+  - first:
+      213: -3087169769317183847
+    second: GameConcepts_17
+  - first:
+      213: 8001392451018471578
+    second: GameConcepts_18
+  - first:
+      213: -5490768125487147746
+    second: GameConcepts_19
+  - first:
+      213: 1331784252034095934
+    second: GameConcepts_20
+  - first:
+      213: 7248183724912613026
+    second: GameConcepts_21
+  - first:
+      213: 8216408453368395599
+    second: GameConcepts_22
+  - first:
+      213: -3327425077999500184
+    second: GameConcepts_23
+  - first:
+      213: -8213248407505833821
+    second: GameConcepts_24
+  - first:
+      213: 2694371452287415780
+    second: GameConcepts_25
+  - first:
+      213: -9181615004086167520
+    second: GameConcepts_26
+  - first:
+      213: -2613511938652211269
+    second: GameConcepts_27
+  - first:
+      213: 8675504595617225083
+    second: GameConcepts_28
+  - first:
+      213: 6580039807153848217
+    second: GameConcepts_29
+  - first:
+      213: -5470494227922269137
+    second: GameConcepts_30
+  - first:
+      213: -6994571151102456849
+    second: GameConcepts_31
+  - first:
+      213: 7607245750933107140
+    second: GameConcepts_32
+  - first:
+      213: -18360609019391796
+    second: GameConcepts_33
+  - first:
+      213: -2251170466813312171
+    second: GameConcepts_34
+  - first:
+      213: 3360700001318729290
+    second: GameConcepts_35
+  - first:
+      213: 7384808337320324031
+    second: GameConcepts_36
+  - first:
+      213: -5302564937987330931
+    second: GameConcepts_37
+  - first:
+      213: 3705070346692159848
+    second: GameConcepts_38
+  - first:
+      213: -2452418994970854281
+    second: GameConcepts_39
+  - first:
+      213: 3250273979929509652
+    second: GameConcepts_40
+  - first:
+      213: -2939314408340463706
+    second: GameConcepts_41
+  - first:
+      213: -2241123883566552565
+    second: GameConcepts_42
+  - first:
+      213: 5854629726156766922
+    second: GameConcepts_43
+  - first:
+      213: -4848530154739228071
+    second: GameConcepts_44
+  - first:
+      213: -3487158008976213188
+    second: GameConcepts_45
+  - first:
+      213: -7882434457886449193
+    second: GameConcepts_46
+  - first:
+      213: 4528103163543568478
+    second: GameConcepts_47
+  - first:
+      213: 7366396081986270036
+    second: GameConcepts_48
+  - first:
+      213: 4653037990991517416
+    second: GameConcepts_49
+  - first:
+      213: 6595501043228026793
+    second: GameConcepts_50
+  - first:
+      213: 856120864854549833
+    second: GameConcepts_51
+  - first:
+      213: -6863695290041192198
+    second: GameConcepts_52
+  - first:
+      213: 3024227557120970425
+    second: GameConcepts_53
+  - first:
+      213: 8756032194606236761
+    second: GameConcepts_54
+  - first:
+      213: 8578688308771352026
+    second: GameConcepts_55
+  - first:
+      213: 4329627643816863615
+    second: GameConcepts_56
+  - first:
+      213: -4536467179420100195
+    second: GameConcepts_57
+  - first:
+      213: -3018835427312445078
+    second: GameConcepts_58
+  - first:
+      213: 326307329532015735
+    second: GameConcepts_59
+  - first:
+      213: 2311520371062534620
+    second: GameConcepts_60
+  - first:
+      213: -6317254106551547219
+    second: GameConcepts_61
+  - first:
+      213: -1728858554910700870
+    second: GameConcepts_62
+  - first:
+      213: 8283259492922806265
+    second: GameConcepts_63
+  - first:
+      213: -986436348569996351
+    second: GameConcepts_64
+  - first:
+      213: -4319899394759943934
+    second: GameConcepts_65
+  - first:
+      213: 304686842496008217
+    second: GameConcepts_66
+  - first:
+      213: -4023303876533852474
+    second: GameConcepts_67
+  - first:
+      213: -6989186683223851331
+    second: GameConcepts_68
+  - first:
+      213: 8739721381877244296
+    second: GameConcepts_69
+  - first:
+      213: -7709566178959997389
+    second: GameConcepts_70
+  - first:
+      213: 8543535742470975698
+    second: GameConcepts_71
+  - first:
+      213: -8199366989692195169
+    second: GameConcepts_72
+  - first:
+      213: 3427530339377726506
+    second: GameConcepts_73
+  - first:
+      213: 5525158794067386961
+    second: GameConcepts_74
+  - first:
+      213: 3849655866860353691
+    second: GameConcepts_75
+  - first:
+      213: 5860788333872174081
+    second: GameConcepts_76
+  - first:
+      213: -8539000854984212777
+    second: GameConcepts_77
+  - first:
+      213: -6503929276984957624
+    second: GameConcepts_78
+  - first:
+      213: 6942711445832964762
+    second: GameConcepts_79
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GameConcepts_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 375
+        width: 438
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecec0cd3b84553aa0800000000000000
+      internalID: -6181941956482904370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_1
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 400
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca42bdcd0b204aa0800000000000000
+      internalID: -6178891350466737468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_2
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 400
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3229e943d179ef30800000000000000
+      internalID: 4605337246255096380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_3
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 400
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b54040dec8a78f0800000000000000
+      internalID: -541965855542191332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_4
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 400
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e983b07dc2bf36880800000000000000
+      internalID: -8618769091852027746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_5
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 400
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3284dccf0a4176b60800000000000000
+      internalID: 7739177166328121379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_6
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 400
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb9d990464924140800000000000000
+      internalID: 4702484118307183600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_7
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 400
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92db881e94888ac80800000000000000
+      internalID: -8311243261414425303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_8
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 400
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bfd5271bbbd16d00800000000000000
+      internalID: 964293391827722164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_9
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 400
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e407f49801ca9b7a0800000000000000
+      internalID: -6360863811660976050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_10
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 400
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f258d06c0b85db0800000000000000
+      internalID: -4802894637913788644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_11
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 281
+        width: 438
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f8b0556045b5e220800000000000000
+      internalID: 2514615255138613495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_12
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 303
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6843cf3e1a72530f0800000000000000
+      internalID: -1137959754573007738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_13
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 303
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de984e84e0c3a7af0800000000000000
+      internalID: -397939585018721811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_14
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 303
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08dc4e6b9ba975c10800000000000000
+      internalID: 2042271078463884672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_15
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 303
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56a4cc5963035da0800000000000000
+      internalID: -5957414131018193315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_16
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 295
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d204ea991aec7ae0800000000000000
+      internalID: -1550106776028577065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_17
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 303
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e468a837b2825d0800000000000000
+      internalID: -3087169769317183847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_18
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 303
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98b27f7a08aa0f60800000000000000
+      internalID: 8001392451018471578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_19
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 303
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e151d403b7fdcc3b0800000000000000
+      internalID: -5490768125487147746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_20
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 303
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b93fb98b27b7210800000000000000
+      internalID: 1331784252034095934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_21
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 303
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a61f2ef1b8b69460800000000000000
+      internalID: 7248183724912613026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_22
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 150
+        width: 91
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f473a88b4fb860270800000000000000
+      internalID: 8216408453368395599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_23
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 202
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8640d11658c92d1d0800000000000000
+      internalID: -3327425077999500184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_24
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 202
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0729ac61ea40e80800000000000000
+      internalID: -8213248407505833821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_25
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 202
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e57b8a7f84546520800000000000000
+      internalID: 2694371452287415780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_26
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 198
+        width: 12
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0281c01dcc9549080800000000000000
+      internalID: -9181615004086167520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_27
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 202
+        width: 64
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb774602db0fabbd0800000000000000
+      internalID: -2613511938652211269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_28
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 202
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7998050775956870800000000000000
+      internalID: 8675504595617225083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 202
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99fb551975ff05b50800000000000000
+      internalID: 6580039807153848217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_30
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 198
+        width: 46
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c4edecb76e414b0800000000000000
+      internalID: -5470494227922269137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_31
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 202
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: febc75ec89a4eee90800000000000000
+      internalID: -6994571151102456849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_32
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 202
+        width: 59
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1b77f94bd529960800000000000000
+      internalID: 7607245750933107140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_33
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 202
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc01a859f15cebff0800000000000000
+      internalID: -18360609019391796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_34
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 202
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5530ebc336c32c0e0800000000000000
+      internalID: -2251170466813312171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_35
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 202
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46f14f68da93ae20800000000000000
+      internalID: 3360700001318729290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_36
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 202
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb22507e0c1c7660800000000000000
+      internalID: 7384808337320324031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_37
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 202
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ce2d878418966b0800000000000000
+      internalID: -5302564937987330931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_38
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 202
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8696b6a99dd0b6330800000000000000
+      internalID: 3705070346692159848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_39
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 202
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c7754eae147fdd0800000000000000
+      internalID: -2452418994970854281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_40
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 202
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41fb46cc6fa4b1d20800000000000000
+      internalID: 3250273979929509652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_41
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 202
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6afdda76e157537d0800000000000000
+      internalID: -2939314408340463706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_42
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 202
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a2f5ea3bde5e0e0800000000000000
+      internalID: -2241123883566552565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_43
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 195
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace340f77b2df3150800000000000000
+      internalID: 5854629726156766922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_44
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 202
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952affb438f86bcb0800000000000000
+      internalID: -4848530154739228071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_45
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 202
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b705f34402b9fc0800000000000000
+      internalID: -3487158008976213188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_46
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 202
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1216c9f97fb9290800000000000000
+      internalID: -7882434457886449193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_47
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 202
+        width: 87
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50465916dd07de30800000000000000
+      internalID: 4528103163543568478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_48
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 202
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453fe9d2532ba3660800000000000000
+      internalID: 7366396081986270036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_49
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 54
+        width: 67
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e652736669e29040800000000000000
+      internalID: 4653037990991517416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_50
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 74
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7235d114de78b50800000000000000
+      internalID: 6595501043228026793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_51
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 74
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 945a472046d81eb00800000000000000
+      internalID: 856120864854549833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_52
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 74
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0b296cf714fb0a0800000000000000
+      internalID: -6863695290041192198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_53
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 70
+        width: 75
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be842ea0f638f920800000000000000
+      internalID: 3024227557120970425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_54
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 74
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9548369b3eca38970800000000000000
+      internalID: 8756032194606236761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_55
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 74
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: addec13a09f9d0770800000000000000
+      internalID: 8578688308771352026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_56
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 74
+        width: 9
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f776a67176de51c30800000000000000
+      internalID: 4329627643816863615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_57
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 70
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d995273b22b3b01c0800000000000000
+      internalID: -4536467179420100195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_58
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 74
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a695daf5c21fa16d0800000000000000
+      internalID: -3018835427312445078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_59
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 74
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774bc5099c6478400800000000000000
+      internalID: 326307329532015735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_60
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 74
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd1f240d78b241020800000000000000
+      internalID: 2311520371062534620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_61
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 74
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa0e1f3cda9458a0800000000000000
+      internalID: -6317254106551547219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_62
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 74
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba07afdd4cd108e0800000000000000
+      internalID: -1728858554910700870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_63
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 74
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ffcb0a4f9c04f270800000000000000
+      internalID: 8283259492922806265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_64
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 74
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3b3f90e597f42f0800000000000000
+      internalID: -986436348569996351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_65
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 74
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20998e56362ac04c0800000000000000
+      internalID: -4319899394759943934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_66
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 74
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 910c5b6a1177a3400800000000000000
+      internalID: 304686842496008217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_67
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 74
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c66fbfc07a5a28c0800000000000000
+      internalID: -4023303876533852474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_68
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 74
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe3d8dedbb610f90800000000000000
+      internalID: -6989186683223851331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_69
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 74
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 881eda2ba4ab94970800000000000000
+      internalID: 8739721381877244296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_70
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 74
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33649b2486e120590800000000000000
+      internalID: -7709566178959997389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_71
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 67
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0f5dffd7cb09670800000000000000
+      internalID: 8543535742470975698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_72
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 74
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e255c3a2ff53e80800000000000000
+      internalID: -8199366989692195169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_73
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 74
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a24cb7f0fa8019f20800000000000000
+      internalID: 3427530339377726506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_74
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 74
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152230056ae4dac40800000000000000
+      internalID: 5525158794067386961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_75
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 74
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98b5b35d99bc6530800000000000000
+      internalID: 3849655866860353691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_76
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 74
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 104543810f3b55150800000000000000
+      internalID: 5860788333872174081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_77
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 74
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7deb8e5c6ff5f7980800000000000000
+      internalID: -8539000854984212777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_78
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 67
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8456c0928c66db5a0800000000000000
+      internalID: -6503929276984957624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameConcepts_79
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 74
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a99e2a647795060800000000000000
+      internalID: 6942711445832964762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GameConcepts_0: -6181941956482904370
+      GameConcepts_1: -6178891350466737468
+      GameConcepts_10: -4802894637913788644
+      GameConcepts_11: 2514615255138613495
+      GameConcepts_12: -1137959754573007738
+      GameConcepts_13: -397939585018721811
+      GameConcepts_14: 2042271078463884672
+      GameConcepts_15: -5957414131018193315
+      GameConcepts_16: -1550106776028577065
+      GameConcepts_17: -3087169769317183847
+      GameConcepts_18: 8001392451018471578
+      GameConcepts_19: -5490768125487147746
+      GameConcepts_2: 4605337246255096380
+      GameConcepts_20: 1331784252034095934
+      GameConcepts_21: 7248183724912613026
+      GameConcepts_22: 8216408453368395599
+      GameConcepts_23: -3327425077999500184
+      GameConcepts_24: -8213248407505833821
+      GameConcepts_25: 2694371452287415780
+      GameConcepts_26: -9181615004086167520
+      GameConcepts_27: -2613511938652211269
+      GameConcepts_28: 8675504595617225083
+      GameConcepts_29: 6580039807153848217
+      GameConcepts_3: -541965855542191332
+      GameConcepts_30: -5470494227922269137
+      GameConcepts_31: -6994571151102456849
+      GameConcepts_32: 7607245750933107140
+      GameConcepts_33: -18360609019391796
+      GameConcepts_34: -2251170466813312171
+      GameConcepts_35: 3360700001318729290
+      GameConcepts_36: 7384808337320324031
+      GameConcepts_37: -5302564937987330931
+      GameConcepts_38: 3705070346692159848
+      GameConcepts_39: -2452418994970854281
+      GameConcepts_4: -8618769091852027746
+      GameConcepts_40: 3250273979929509652
+      GameConcepts_41: -2939314408340463706
+      GameConcepts_42: -2241123883566552565
+      GameConcepts_43: 5854629726156766922
+      GameConcepts_44: -4848530154739228071
+      GameConcepts_45: -3487158008976213188
+      GameConcepts_46: -7882434457886449193
+      GameConcepts_47: 4528103163543568478
+      GameConcepts_48: 7366396081986270036
+      GameConcepts_49: 4653037990991517416
+      GameConcepts_5: 7739177166328121379
+      GameConcepts_50: 6595501043228026793
+      GameConcepts_51: 856120864854549833
+      GameConcepts_52: -6863695290041192198
+      GameConcepts_53: 3024227557120970425
+      GameConcepts_54: 8756032194606236761
+      GameConcepts_55: 8578688308771352026
+      GameConcepts_56: 4329627643816863615
+      GameConcepts_57: -4536467179420100195
+      GameConcepts_58: -3018835427312445078
+      GameConcepts_59: 326307329532015735
+      GameConcepts_6: 4702484118307183600
+      GameConcepts_60: 2311520371062534620
+      GameConcepts_61: -6317254106551547219
+      GameConcepts_62: -1728858554910700870
+      GameConcepts_63: 8283259492922806265
+      GameConcepts_64: -986436348569996351
+      GameConcepts_65: -4319899394759943934
+      GameConcepts_66: 304686842496008217
+      GameConcepts_67: -4023303876533852474
+      GameConcepts_68: -6989186683223851331
+      GameConcepts_69: 8739721381877244296
+      GameConcepts_7: -8311243261414425303
+      GameConcepts_70: -7709566178959997389
+      GameConcepts_71: 8543535742470975698
+      GameConcepts_72: -8199366989692195169
+      GameConcepts_73: 3427530339377726506
+      GameConcepts_74: 5525158794067386961
+      GameConcepts_75: 3849655866860353691
+      GameConcepts_76: 5860788333872174081
+      GameConcepts_77: -8539000854984212777
+      GameConcepts_78: -6503929276984957624
+      GameConcepts_79: 6942711445832964762
+      GameConcepts_8: 964293391827722164
+      GameConcepts_9: -6360863811660976050
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

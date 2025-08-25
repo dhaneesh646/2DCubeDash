@@ -9,7 +9,7 @@ public class HomeController : MonoBehaviour
     {
         playButton.onClick.AddListener(() =>
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
+            GetComponent<OnboardingController>().StartOnboarding();
         });
     }
 
