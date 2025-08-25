@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public Action OnPlayerRespawn;
     public Action OnPlayerDeath;
     public Action<GameObject> PlayerKilled;
+    public Action OnLevelCompleted;
+    public Action<string> MoveNextLevel;
 
     void Awake()
     {
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
 
         respawnPoint = defaultSpawnPoint ? defaultSpawnPoint.position : Vector2.zero;
         PlayerKilled = PlayerDied;
+        MoveNextLevel += (nextSceneName) => StartCoroutine(LoadNextScene(nextSceneName));
     }
 
     public void SetRespawnPoint(Vector2 pos)
@@ -48,7 +51,7 @@ public class GameManager : MonoBehaviour
         {
             sr.enabled = false;
         }
-        
+
         if (isPlayerAlive)
         {
             OnPlayerDeath?.Invoke();
@@ -61,7 +64,7 @@ public class GameManager : MonoBehaviour
         var rb = player.GetComponent<Rigidbody2D>();
         if (rb) rb.linearVelocity = Vector2.zero;
 
-        
+
         foreach (var sr in player.GetComponentsInChildren<SpriteRenderer>())
         {
             sr.enabled = true;
@@ -76,7 +79,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Level Complete! Loading next level...");
         AudioManager.Instance.PlayEffect(SoundEffect.LevelComplete);
         OnLevelStatusUpdated?.Invoke(true);
-        StartCoroutine(LoadNextScene(nextSceneName));
+        OnLevelCompleted?.Invoke();
     }
 
     IEnumerator LoadNextScene(string nextSceneName)
@@ -84,5 +87,11 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         if (!string.IsNullOrEmpty(nextSceneName))
             UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
+    }
+
+    void OnDestroy()
+    {
+        MoveNextLevel = null;
+        PlayerKilled = null;
     }
 }
