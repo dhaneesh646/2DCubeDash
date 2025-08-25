@@ -23,7 +23,7 @@ Use movement, jumps, dashes, and your mask ability to uncover hidden dangers, br
 | Move             | A / D or ← / →          |
 | Jump             | Space                   |
 | Charged Jump     | Hold Space (uses stamina) |
-| Dash             | Left Shift (uses stamina, breaks walls) |
+| Dash             | Left Shift (uses stamina, breaks walls and kill enemies) |
 | Scan Parallel World | E (activate mask ability) |
 
 ---
@@ -60,7 +60,6 @@ Use movement, jumps, dashes, and your mask ability to uncover hidden dangers, br
 
 - **Trail Renderer**: Dash effect.
 - **Particles**: Landing dust, wall shards.
-- **Camera Shake**: Adds impact when breaking walls.
 - **Lighting**:  
   - Warm torches `#FFB347`  
   - Cool crystals `#00FFF7`
@@ -86,6 +85,11 @@ Use movement, jumps, dashes, and your mask ability to uncover hidden dangers, br
 | `StaminaController.cs`      | Manages stamina usage and regeneration.         |
 | `BreakableWall.cs`          | Logic for breakable walls.                      |
 | `ParallelWorldMaskController.cs` | Reveals hidden hazards in the Parallel World. |
+| `PlayerParticleController.cs` | Controlls Players particle effect. |
+| `GameManager.cs` | Controlls Players Death,Repawn,Respawn point. |
+| `AudioManager.cs` | Controlls wholegame Audio. |
+
+
 
 **Assets Directory**:  
 - Sprites: `Assets/projectresources/sprites/`  
