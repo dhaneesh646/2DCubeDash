@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 64706c60bb3051541b83ab221ad7b5c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2177108222591507701
+    second: create a game title peace_0
+  - first:
+      213: 6784919433119071343
+    second: create a game title peace_1
+  - first:
+      213: -5742583268637566063
+    second: create a game title peace_2
+  - first:
+      213: 5943716673113640553
+    second: create a game title peace_3
+  - first:
+      213: -4851001767964540639
+    second: create a game title peace_4
+  - first:
+      213: 8778638078508448027
+    second: create a game title peace_5
+  - first:
+      213: 5508625053400976214
+    second: create a game title peace_6
+  - first:
+      213: 243586504856238848
+    second: create a game title peace_7
+  - first:
+      213: 4229924201885937534
+    second: create a game title peace_8
+  - first:
+      213: -2575921009571382179
+    second: create a game title peace_9
+  - first:
+      213: 2664363895705337260
+    second: create a game title peace_10
+  - first:
+      213: 3720550513598953120
+    second: create a game title peace_11
+  - first:
+      213: -3776779947283521776
+    second: create a game title peace_12
+  - first:
+      213: 1120817409118488058
+    second: create a game title peace_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: create a game title peace_0
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 414
+        width: 503
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03e9da3b9b59c1e0800000000000000
+      internalID: -2177108222591507701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_1
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 805
+        width: 147
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6cf4b0c640e82e50800000000000000
+      internalID: 6784919433119071343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_2
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 591
+        width: 149
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b91c351fe3e40b0800000000000000
+      internalID: -5742583268637566063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 631
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e4182b2d25c7250800000000000000
+      internalID: 5943716673113640553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_4
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 591
+        width: 130
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1218eaff797cdacb0800000000000000
+      internalID: -4851001767964540639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_5
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 411
+        width: 93
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19b63932dcf3d970800000000000000
+      internalID: 8778638078508448027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_6
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 206
+        width: 196
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b48c4dc41927c40800000000000000
+      internalID: 5508625053400976214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_7
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 202
+        width: 122
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bf806b2a4616300800000000000000
+      internalID: 243586504856238848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_8
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 206
+        width: 115
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f2d3886a5b3ba30800000000000000
+      internalID: 4229924201885937534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_9
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 88
+        width: 157
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c38075d7d704cd0800000000000000
+      internalID: -2575921009571382179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_10
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 204
+        width: 133
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad74e3c8d8b9f420800000000000000
+      internalID: 2664363895705337260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_11
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 206
+        width: 113
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a676f3dafc02a330800000000000000
+      internalID: 3720550513598953120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_12
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 202
+        width: 123
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01fd85fe5ae269bc0800000000000000
+      internalID: -3776779947283521776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: create a game title peace_13
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 78
+        width: 111
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5c498ce71fd8f00800000000000000
+      internalID: 1120817409118488058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      create a game title peace_0: -2177108222591507701
+      create a game title peace_1: 6784919433119071343
+      create a game title peace_10: 2664363895705337260
+      create a game title peace_11: 3720550513598953120
+      create a game title peace_12: -3776779947283521776
+      create a game title peace_13: 1120817409118488058
+      create a game title peace_2: -5742583268637566063
+      create a game title peace_3: 5943716673113640553
+      create a game title peace_4: -4851001767964540639
+      create a game title peace_5: 8778638078508448027
+      create a game title peace_6: 5508625053400976214
+      create a game title peace_7: 243586504856238848
+      create a game title peace_8: 4229924201885937534
+      create a game title peace_9: -2575921009571382179
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
