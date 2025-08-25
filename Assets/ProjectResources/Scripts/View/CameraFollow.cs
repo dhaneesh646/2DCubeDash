@@ -3,11 +3,11 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [Header("Target")]
-    [SerializeField] Transform target; // player transform
+    [SerializeField] Transform target;
 
     [Header("Follow Settings")]
-    [SerializeField] float smoothSpeed = 0.15f;   // lower = smoother, higher = snappier
-    [SerializeField] Vector3 offset = new Vector3(0, 1, -10); // adjust to your game
+    [SerializeField] float smoothSpeed = 0.15f; 
+    [SerializeField] Vector3 offset = new Vector3(0, 1, -10);
 
     [Header("Bounds (Optional)")]
     [SerializeField] bool useBounds = false;

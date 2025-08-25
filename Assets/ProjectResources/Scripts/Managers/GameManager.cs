@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         {
             StopCoroutine(dieCoroutine);
         }
-        StartCoroutine(RespawnPlayer(player));
+        dieCoroutine = StartCoroutine(RespawnPlayer(player));
     }
 
     public IEnumerator RespawnPlayer(GameObject player)
