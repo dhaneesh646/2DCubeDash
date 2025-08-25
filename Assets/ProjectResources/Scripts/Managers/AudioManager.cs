@@ -38,13 +38,6 @@ public class AudioManager : MonoBehaviour
     [Header("Sound Effects")]
     [SerializeField] private List<Sound> soundEffects = new List<Sound>();
 
-    [Header("Music Tracks")]
-    [SerializeField] private AudioClip mainMenuMusic;
-    [SerializeField] private AudioClip gameplayMusic;
-    [SerializeField] private AudioClip bossMusic;
-    [SerializeField] private AudioClip victoryMusic;
-    [SerializeField] private AudioClip gameOverMusic;
-
     [Header("Settings")]
     [SerializeField] private float musicFadeDuration = 1f;
     [SerializeField] private float heartbeatMaxVolume = 0.7f;
@@ -52,7 +45,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float heartbeatMaxPitch = 1.5f;
 
     private Dictionary<SoundEffect, Sound> soundDictionary = new Dictionary<SoundEffect, Sound>();
-    private Coroutine musicFadeCoroutine;
     private Coroutine heartbeatCoroutine;
     private float currentHeartbeatIntensity = 0f;
 
@@ -84,7 +76,7 @@ public class AudioManager : MonoBehaviour
         heartbeatSource.volume = 0f;
     }
 
-    
+
     void BuildSoundDictionary()
     {
         foreach (Sound sound in soundEffects)
@@ -115,7 +107,7 @@ public class AudioManager : MonoBehaviour
             // source.volume = sound.volume;
             // source.pitch = sound.pitch;
             // source.loop = sound.loop;
-            
+
             if (sound.loop)
             {
                 if (source.clip != sound.clip || !source.isPlaying)
@@ -139,7 +131,7 @@ public class AudioManager : MonoBehaviour
     {
         // Check all sources for this sound and stop them
         AudioSource[] sources = { sfxSource, heartbeatSource };
-        
+
         foreach (AudioSource source in sources)
         {
             if (source.isPlaying && soundDictionary.TryGetValue(effect, out Sound sound))
@@ -159,7 +151,7 @@ public class AudioManager : MonoBehaviour
     public void SetHeartbeatIntensity(float intensity)
     {
         currentHeartbeatIntensity = Mathf.Clamp01(intensity);
-        
+
         if (heartbeatCoroutine != null)
         {
             StopCoroutine(heartbeatCoroutine);
@@ -170,6 +162,8 @@ public class AudioManager : MonoBehaviour
     private IEnumerator UpdateHeartbeat()
     {
         // Get or load heartbeat sound
+
+        float bgTargetVolume = Mathf.Lerp(1f, 0.3f, currentHeartbeatIntensity);
         if (!soundDictionary.ContainsKey(SoundEffect.HeartbeatWarning))
         {
             Debug.LogWarning("Heartbeat sound not found in dictionary");
@@ -177,7 +171,7 @@ public class AudioManager : MonoBehaviour
         }
 
         Sound heartbeatSound = soundDictionary[SoundEffect.HeartbeatWarning];
-        
+
         // Ensure heartbeat source is configured
         heartbeatSource.clip = heartbeatSound.clip;
         heartbeatSource.volume = heartbeatSound.volume * currentHeartbeatIntensity;
@@ -200,6 +194,9 @@ public class AudioManager : MonoBehaviour
 
         while (elapsed < duration)
         {
+            float bgStartVolume = bgGameMusic.volume;
+            bgGameMusic.volume = Mathf.Lerp(bgStartVolume, bgTargetVolume, duration);
+
             elapsed += Time.deltaTime;
             float t = elapsed / duration;
 
@@ -211,6 +208,7 @@ public class AudioManager : MonoBehaviour
 
         heartbeatSource.volume = targetVolume;
         heartbeatSource.pitch = targetPitch;
+        bgGameMusic.volume = bgTargetVolume;
 
         // Stop if intensity is zero
         if (currentHeartbeatIntensity <= 0.01f && heartbeatSource.isPlaying)
@@ -231,7 +229,7 @@ public class AudioManager : MonoBehaviour
     public bool IsPlaying(SoundEffect effect)
     {
         AudioSource[] sources = { sfxSource, heartbeatSource };
-        
+
         foreach (AudioSource source in sources)
         {
             if (source.isPlaying && soundDictionary.TryGetValue(effect, out Sound sound))
@@ -264,23 +262,6 @@ public class AudioManager : MonoBehaviour
         bgGameMusic.Stop();
         sfxSource.Stop();
         heartbeatSource.Stop();
-    }
-
-    #endregion
-
-    #region Editor Helpers
-
-    [ContextMenu("Add Default Sound Effects")]
-    void AddDefaultSoundEffects()
-    {
-        soundEffects.Clear();
-        
-        foreach (SoundEffect effect in System.Enum.GetValues(typeof(SoundEffect)))
-        {
-            soundEffects.Add(new Sound { effect = effect, clip = null, volume = 1f, pitch = 1f });
-        }
-        
-        Debug.Log("Added default sound effect entries. Please assign audio clips in the inspector.");
     }
 
     #endregion
