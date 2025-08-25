@@ -1,82 +1,103 @@
-🟦 Mask of secrets
-📖 Overview
+Absolutely! Here's an enhanced and streamlined version of your README file, with improved clarity, formatting, and emphasis on your core concept. I’ve also removed any redundant or unclear phrasing while keeping the tone developer-friendly and engaging.
 
-Cube Escape is a 2D puzzle-platformer prototype built in Unity.
-The player controls a cube that can move, jump, charge jump, and dash to overcome obstacles.
-The game introduces mechanics step by step through an onboarding level before progressing into challenges like breakable walls and moving platforms.
+---
 
+# 🟦 **Mask of Secrets**
 
+## 📖 Overview
 
-🎮 Controls
+**Mask of Secrets** is a 2D puzzle-platformer prototype built in Unity.  
+You play as a mysterious cube navigating two intertwined realities: the **Present World** and the **Parallel World**.
 
-Move → A / D or ← / →
-Jump → Space
-Charged Jump → Hold Space (uses stamina)
-Dash → Left Shift (uses stamina, can break walls)
+- The **Present World** is visible and mapped.
+- The **Parallel World** is hidden and can only be revealed using the cube’s special ability: the **Mask of Secrets**.
 
+Use movement, jumps, dashes, and your mask ability to uncover hidden dangers, break through obstacles, and escape both worlds.
 
+---
 
-🧩 Core Mechanics
+## 🎮 Controls
 
-Movement: Smooth & responsive platforming.
-Jump System: Normal jump + charged jump with stamina.
-Dash: Snappy dash, consumes stamina, breaks certain walls.
-Breakable Walls: Can only be destroyed by dashing.
-Checkpoints: Save progress mid-level.
-Moving Platforms: Timed jumps required.
-Stamina System: Limits charged jumps & dashing.
+| Action           | Key(s)                  |
+|------------------|-------------------------|
+| Move             | A / D or ← / →          |
+| Jump             | Space                   |
+| Charged Jump     | Hold Space (uses stamina) |
+| Dash             | Left Shift (uses stamina, breaks walls) |
+| Scan Parallel World | E (activate mask ability) |
 
+---
 
+## 🧩 Core Mechanics
 
-🗺️ Levels
-1. Onboarding (Tutorial)
+- **Dual World System**: Switch between Present and Parallel Worlds using the mask ability.
+- **Movement**: Smooth, responsive platforming.
+- **Jump System**: Standard jump + charged jump (consumes stamina).
+- **Dash**: Quick burst movement, breaks certain walls, consumes stamina.
+- **Breakable Walls**: Only destroyed via dash.
+- **Checkpoints**: Save progress mid-level.
+- **Moving Platforms**: Require precise timing.
+- **Stamina System**: Limits use of charged jump and dash.
+- **Mask Ability**: Reveals hidden hazards and paths in the Parallel World.
 
-Learn to move, jump, charge jump, dash, and break walls.
-Introduces checkpoints & moving platforms.
-No enemies — focused on learning.
+---
 
+## 🗺️ Levels
 
+### 1. Onboarding (Tutorial)
+- Learn core mechanics: movement, jump, charged jump, dash, mask ability.
+- Introduces checkpoints and moving platforms.
+- No enemies — focused on exploration and learning.
 
-2. Challenge Level
+### 2. Challenge Level
+- Combines all mechanics.
+- Requires stamina management and mask usage.
+- Hazards like spikes and moving platforms exist in the Parallel World and can kill the player.
 
-Combines mechanics.
-Requires stamina management.
-Hazards like spikes and moving platforms.
+---
 
+## ⚡ Visual Design & FX
 
+- **Trail Renderer**: Dash effect.
+- **Particles**: Landing dust, wall shards.
+- **Camera Shake**: Adds impact when breaking walls.
+- **Lighting**:  
+  - Warm torches `#FFB347`  
+  - Cool crystals `#00FFF7`
 
-⚡ Visual Design & FX
+---
 
-Trail Renderer → Dash effect.
-Particles → Landing dust, breakable wall shards.
-Camera Shake → Adds impact when breaking walls.
-Lighting → Warm torches (#FFB347) + cool crystals (#00FFF7).
+## 🛠️ Project Setup
 
+1. Open Unity **6000.0.50f1 LTS** or later.
+2. Clone or download this repository.
+3. Open the project via Unity Hub.
+4. Load the scene: `Scenes/Onboarding.unity`.
 
+---
 
-🛠️ Project Setup
+## 📌 Developer Notes
 
-Open Unity 2022 LTS or later.
-Clone/download this repository.
-Open the project in Unity Hub.
-Load the Scenes/Onboarding.unity scene to start.
+**Scripts Directory**: `Assets/projectresources/Scripts/`
 
+| Script Name                  | Description                                      |
+|-----------------------------|--------------------------------------------------|
+| `PlayerController.cs`       | Handles movement, jump, dash.                   |
+| `StaminaController.cs`      | Manages stamina usage and regeneration.         |
+| `BreakableWall.cs`          | Logic for breakable walls.                      |
+| `ParallelWorldMaskController.cs` | Reveals hidden hazards in the Parallel World. |
 
+**Assets Directory**:  
+- Sprites: `Assets/projectresources/sprites/`  
+- Prefabs: `Assets/projectresources/Prefabs/`
 
-📌 Notes for Developers
+---
 
-Scripts are inside Scripts/
-PlayerController.cs → Handles movement, jump, dash.
-StaminaController.cs → Manages stamina usage/regeneration.
-BreakableWall.cs → Breakable wall logic.
-CameraShake.cs → Handles shake effect.
-Art assets (icons, warning symbols, etc.) are inside Assets/projectresources/sprites.
-Prefabs for walls, checkpoints, and moving platforms are in Assets/projectresources/Prefabs/.
+## 🚀 Next Steps
 
+- Add polish: animations, VFX, and improved UI.
+- Introduce enemy interactions.
+- Expand puzzle-platformer mechanics with new challenges.
 
+---
 
-🚀 Next Steps
-
-Add polish: animations, VFX, better UI.
-Add enemy interactions.
-Expand puzzle-platformer mechanics.
