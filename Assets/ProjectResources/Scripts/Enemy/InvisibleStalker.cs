@@ -27,11 +27,19 @@ public class InvisibleStalker : MonoBehaviour
     {
         if (!isAlive) return;
 
-        Patrol();
-        CheckForPlayer();
-        UpdateFacingDirection();
+        if (ParallelWorldMaskController.IsMaskActive)
+        {
+            // Mask is ON → freeze in place, just stare
+            UpdateFacingDirection();
+        }
+        else
+        {
+            // Mask is OFF → patrol and kill player
+            Patrol();
+            CheckForPlayer();
+            UpdateFacingDirection();
+        }
     }
-
     void Patrol()
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPoint, patrolSpeed * Time.deltaTime);
@@ -71,7 +79,6 @@ public class InvisibleStalker : MonoBehaviour
     {
         if (!isAlive) return;
 
-        // Check if player dashed into us
         if (other.CompareTag("Player"))
         {
             PlayerController playerController = other.GetComponent<PlayerController>();

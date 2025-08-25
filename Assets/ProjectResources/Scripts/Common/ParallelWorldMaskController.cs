@@ -24,6 +24,7 @@ public class ParallelWorldMaskController : MonoBehaviour
     [SerializeField] Color full = Color.green;
     [SerializeField] Color mid = Color.yellow;
     [SerializeField] Color low = Color.red;
+    public static bool IsMaskActive { get; private set; }
 
     void Awake()
     {
@@ -49,6 +50,7 @@ public class ParallelWorldMaskController : MonoBehaviour
         {
             isRevealing = true;
             maskObject.SetActive(true);
+            IsMaskActive = true; // 👈 mark mask as active
 
             currentEnergy -= drainRate * Time.deltaTime;
             if (currentEnergy <= 0f)
@@ -71,6 +73,7 @@ public class ParallelWorldMaskController : MonoBehaviour
         {
             isRevealing = false;
             maskObject.SetActive(false);
+            IsMaskActive = false;
         }
     }
 
