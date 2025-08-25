@@ -4,26 +4,26 @@ using UnityEngine.UI;
 public class ParallelWorldMaskController : MonoBehaviour
 {
     [Header("Mask Settings")]
-    [SerializeField] Transform maskTransform; // assign the SpriteMask
-    [SerializeField] GameObject maskObject;   // parent or mask GameObject (so we can enable/disable)
+    [SerializeField] Transform maskTransform;
+    [SerializeField] GameObject maskObject;
 
     [Header("Energy Settings")]
-    [SerializeField] float maxEnergy = 1f;       // total seconds of reveal
-    [SerializeField] float drainRate = 0.1f;       // energy drained per second
-    [SerializeField] float regenRate = 0.05f;     // energy regen per second
+    [SerializeField] float maxEnergy = 1f;
+    [SerializeField] float drainRate = 0.1f;
+    [SerializeField] float regenRate = 0.05f;
     private float currentEnergy;
 
     [Header("Input Settings")]
-    public KeyCode revealKey = KeyCode.Mouse1; // right mouse to reveal
+    public KeyCode toggleKey = KeyCode.E; // 👈 Toggle key for ability
 
     [Header("UI")]
-    public Image energyBar; // drag UI Slider here
-
-    private Camera mainCamera;
-    private bool isRevealing;
+    public Image energyBar;
     [SerializeField] Color full = Color.green;
     [SerializeField] Color mid = Color.yellow;
     [SerializeField] Color low = Color.red;
+
+    private Camera mainCamera;
+    private bool isRevealing;
     public static bool IsMaskActive { get; private set; }
 
     void Awake()
@@ -32,49 +32,62 @@ public class ParallelWorldMaskController : MonoBehaviour
         currentEnergy = maxEnergy;
         if (energyBar) energyBar.fillAmount = maxEnergy;
         UpdateUI();
-        maskObject.SetActive(false); // mask hidden at start
+        maskObject.SetActive(false);
     }
-
-
 
     void Update()
     {
-        HandleReveal();
+        HandleToggleInput();
+        HandleEnergy();
         UpdateUI();
         if (isRevealing) FollowMouse();
     }
 
-    void HandleReveal()
+    void HandleToggleInput()
     {
-        if (Input.GetKey(revealKey) && currentEnergy > 0f)
+        if (Input.GetKeyDown(toggleKey))
         {
-            isRevealing = true;
-            maskObject.SetActive(true);
-            IsMaskActive = true; // 👈 mark mask as active
+            if (!isRevealing && currentEnergy > 0f)
+            {
+                StartReveal();
+            }
+            else
+            {
+                StopReveal();
+            }
+        }
+    }
 
+    void HandleEnergy()
+    {
+        if (isRevealing)
+        {
             currentEnergy -= drainRate * Time.deltaTime;
             if (currentEnergy <= 0f)
             {
                 currentEnergy = 0f;
-                StopReveal();
+                StopReveal(); // 👈 Auto-disable if energy runs out
             }
         }
         else
         {
-            StopReveal();
             if (currentEnergy < maxEnergy)
                 currentEnergy += regenRate * Time.deltaTime;
         }
     }
 
+    void StartReveal()
+    {
+        isRevealing = true;
+        maskObject.SetActive(true);
+        IsMaskActive = true;
+    }
+
     void StopReveal()
     {
-        if (isRevealing)
-        {
-            isRevealing = false;
-            maskObject.SetActive(false);
-            IsMaskActive = false;
-        }
+        isRevealing = false;
+        maskObject.SetActive(false);
+        IsMaskActive = false;
     }
 
     void FollowMouse()
@@ -82,7 +95,6 @@ public class ParallelWorldMaskController : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Mathf.Abs(mainCamera.transform.position.z);
         Vector3 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
-
         maskTransform.position = new Vector3(worldPos.x, worldPos.y, maskTransform.position.z);
     }
 
@@ -103,4 +115,3 @@ public class ParallelWorldMaskController : MonoBehaviour
         }
     }
 }
-

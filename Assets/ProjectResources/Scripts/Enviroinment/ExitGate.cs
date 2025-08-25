@@ -8,6 +8,6 @@ public class ExitGate : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         if (!string.IsNullOrEmpty(nextSceneName))
-            SceneManager.LoadScene(nextSceneName);
+            GameManager.Instance.LevelComplete(nextSceneName);
     }
 }

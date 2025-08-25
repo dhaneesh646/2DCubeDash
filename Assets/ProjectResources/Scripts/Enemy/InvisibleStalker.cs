@@ -27,18 +27,9 @@ public class InvisibleStalker : MonoBehaviour
     {
         if (!isAlive) return;
 
-        if (ParallelWorldMaskController.IsMaskActive)
-        {
-            // Mask is ON → freeze in place, just stare
-            UpdateFacingDirection();
-        }
-        else
-        {
-            // Mask is OFF → patrol and kill player
-            Patrol();
-            CheckForPlayer();
-            UpdateFacingDirection();
-        }
+        Patrol();
+        CheckForPlayer();
+        UpdateFacingDirection();
     }
     void Patrol()
     {

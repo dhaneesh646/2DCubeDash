@@ -62,4 +62,18 @@ public class GameManager : MonoBehaviour
         isPlayerAlive = true;
 
     }
+
+    public void LevelComplete(string nextSceneName = null)
+    {
+        Debug.Log("Level Complete! Loading next level...");
+        AudioManager.Instance.PlayEffect(SoundEffect.LevelComplete);
+        StartCoroutine(LoadNextScene("nextSceneName"));
+    }
+
+    IEnumerator LoadNextScene(string nextSceneName)
+    {
+        yield return new WaitForSeconds(2f);
+        if (!string.IsNullOrEmpty(nextSceneName))
+            UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
+    }
 }
