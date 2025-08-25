@@ -38,9 +38,18 @@ public class ParallelWorldWarning : MonoBehaviour
     private float currentDangerLevel = 0f;
     private bool audioWarningActive = false;
     
+    
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        GameManager.Instance.OnPlayerRespawn += () =>
+        {
+            isWarningActive = false;
+            currentDangerLevel = 0f;
+            
+            if (warningCoroutine != null) StopCoroutine(warningCoroutine);
+            StartCoroutine(FadeOutWarning());
+        };
         
         // Initialize UI
         if (warningFillImage != null)
@@ -368,12 +377,20 @@ public class ParallelWorldWarning : MonoBehaviour
             AudioManager.Instance.StopHeartbeat();
         }
     }
-    
+
     void OnDestroy()
     {
         if (audioWarningActive && AudioManager.Instance != null)
         {
             AudioManager.Instance.StopHeartbeat();
         }
+        GameManager.Instance.OnPlayerRespawn -= () =>
+        {
+            isWarningActive = false;
+            currentDangerLevel = 0f;
+            
+            if (warningCoroutine != null) StopCoroutine(warningCoroutine);
+            StartCoroutine(FadeOutWarning());
+        };
     }
 }

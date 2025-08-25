@@ -33,6 +33,13 @@ public class ParallelWorldMaskController : MonoBehaviour
         if (energyBar) energyBar.fillAmount = maxEnergy;
         UpdateUI();
         maskObject.SetActive(false);
+
+        GameManager.Instance.OnPlayerRespawn += () =>
+        {
+            currentEnergy = maxEnergy;
+            UpdateUI();
+            StopReveal();
+        };
     }
 
     void Update()
@@ -113,5 +120,15 @@ public class ParallelWorldMaskController : MonoBehaviour
             float lerpT = t / 0.5f;
             energyBar.color = Color.Lerp(low, mid, lerpT);
         }
+    }
+
+    void OnDestroy()
+    {
+        GameManager.Instance.OnPlayerRespawn -= () =>
+        {
+            currentEnergy = maxEnergy;
+            UpdateUI();
+            StopReveal();
+        };
     }
 }

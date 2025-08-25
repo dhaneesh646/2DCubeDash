@@ -8,25 +8,31 @@ public class StaminaController : MonoBehaviour
     [SerializeField] float staminaConsumptionRate = 25f; // per second
     [SerializeField] float staminaRegenerationRate = 15f; // per second
     [SerializeField] float regenerationDelay = 1f; // seconds before regeneration starts
-    
+
     [Header("UI References")]
     [SerializeField] Slider staminaSlider;
     [SerializeField] Image staminaFillImage;
-    
+
     private float currentStamina;
     private float lastConsumptionTime;
     private bool isConsuming;
-    
+
     public float CurrentStamina => currentStamina;
     public float MaxStamina => maxStamina;
     public float StaminaPercentage => currentStamina / maxStamina;
-    
+
     void Start()
     {
         currentStamina = maxStamina;
         UpdateStaminaUI();
+        GameManager.Instance.OnPlayerRespawn += () =>
+        {
+            currentStamina = maxStamina;
+            UpdateStaminaUI();
+            isConsuming = false;
+        };
     }
-    
+
     void Update()
     {
         if (isConsuming)
@@ -38,12 +44,12 @@ public class StaminaController : MonoBehaviour
             RegenerateStamina();
         }
     }
-    
+
     public bool CanConsumeStamina(float amount)
     {
         return currentStamina >= amount;
     }
-    
+
     public bool ConsumeStamina(float amount)
     {
         if (CanConsumeStamina(amount))
@@ -55,7 +61,7 @@ public class StaminaController : MonoBehaviour
         }
         return false;
     }
-    
+
     public void ConsumeStaminaOverTime()
     {
         float consumption = staminaConsumptionRate * Time.deltaTime;
@@ -68,19 +74,19 @@ public class StaminaController : MonoBehaviour
             isConsuming = false;
         }
     }
-    
+
     public void StopConsumption()
     {
         isConsuming = false;
     }
-    
+
     private void RegenerateStamina()
     {
         float regeneration = staminaRegenerationRate * Time.deltaTime;
         currentStamina = Mathf.Min(maxStamina, currentStamina + regeneration);
         UpdateStaminaUI();
     }
-    
+
     private void UpdateStaminaUI()
     {
         if (staminaFillImage != null)
@@ -90,10 +96,20 @@ public class StaminaController : MonoBehaviour
             staminaFillImage.fillAmount = StaminaPercentage;
         }
     }
-    
+
     // For external queries
     public bool HasStaminaForAction(float requiredPercentage = 0.1f)
     {
         return StaminaPercentage >= requiredPercentage;
+    }
+    
+    void OnDestroy()
+    {
+        GameManager.Instance.OnPlayerRespawn -= () =>
+        {
+            currentStamina = maxStamina;
+            UpdateStaminaUI();
+            isConsuming = false;
+        };
     }
 }

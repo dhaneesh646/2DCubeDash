@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
@@ -9,9 +10,22 @@ public class MovingPlatform : MonoBehaviour
 
     private bool toB = true;
     private float waitUntil;
+    private bool isLevelOver = false;
+
+    void Start()
+    {
+        GameManager.Instance.OnLevelStatusUpdated += UpdateLevelStatus;
+        
+    }
+
+    void UpdateLevelStatus(bool isOver)
+    {
+        isLevelOver = isOver;
+    }
 
     void FixedUpdate()
     {
+        if( isLevelOver ) return;
         if (Time.time < waitUntil) return;
 
         Vector3 target = toB ? pointB.position : pointA.position;

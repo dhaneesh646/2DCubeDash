@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour
     private bool isPlayerAlive = true;
 
     private Coroutine dieCoroutine;
+    public Action<bool> OnLevelStatusUpdated;
+    public Action OnPlayerRespawn;
 
     void Awake()
     {
@@ -53,13 +56,13 @@ public class GameManager : MonoBehaviour
         var rb = player.GetComponent<Rigidbody2D>();
         if (rb) rb.linearVelocity = Vector2.zero;
 
-        var stamina = player.GetComponent<StaminaController>();
-        if (stamina) stamina.StopConsumption();
+        
         foreach (var sr in player.GetComponentsInChildren<SpriteRenderer>())
         {
             sr.enabled = true;
         }
         isPlayerAlive = true;
+        OnPlayerRespawn?.Invoke();
 
     }
 
@@ -67,7 +70,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Level Complete! Loading next level...");
         AudioManager.Instance.PlayEffect(SoundEffect.LevelComplete);
-        StartCoroutine(LoadNextScene("nextSceneName"));
+        OnLevelStatusUpdated?.Invoke(true);
+        StartCoroutine(LoadNextScene(nextSceneName));
     }
 
     IEnumerator LoadNextScene(string nextSceneName)

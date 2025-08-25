@@ -90,13 +90,10 @@ public class InvisibleStalker : MonoBehaviour
     {
         isAlive = false;
 
-        // Play death effect
         if (deathEffect != null)
         {
             deathEffect.Play();
         }
-        //  if (CameraShake.Instance != null)
-        //     CameraShake.Instance.Shake(0.2f, 0.15f);
 
         GetComponent<Collider2D>().enabled = false;
         if (spriteRenderer != null) spriteRenderer.enabled = false;
