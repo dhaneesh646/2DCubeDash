@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private Vector2 respawnPoint;
     [SerializeField] private Transform defaultSpawnPoint;
     [SerializeField] PlayerParticleController playerParticles;
+    private bool isPlayerAlive = true;
 
     private Coroutine dieCoroutine;
 
@@ -41,9 +42,11 @@ public class GameManager : MonoBehaviour
         {
             sr.enabled = false;
         }
-        
-
-        playerParticles.Die(player.transform);
+        if (isPlayerAlive)
+        {
+            playerParticles.Die(player.transform);
+            isPlayerAlive = false;
+        }
 
         yield return new WaitForSeconds(1.5f);
         player.transform.position = respawnPoint;
@@ -56,6 +59,7 @@ public class GameManager : MonoBehaviour
         {
             sr.enabled = true;
         }
+        isPlayerAlive = true;
 
     }
 }
