@@ -55,6 +55,7 @@ public class PlayerParticleController : MonoBehaviour
     {
         if (dieParticleSystem != null)
         {
+            AudioManager.Instance.PlayEffect(SoundEffect.PlayerDeath);
             playerController.chargeCanvas.SetActive(false);
             dieParticleSystem.Play();
         }

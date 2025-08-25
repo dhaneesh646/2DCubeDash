@@ -107,5 +107,4 @@ public class InvisibleStalker : MonoBehaviour
 
         Debug.Log("Enemy defeated by dash!");
     }
-
 }

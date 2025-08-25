@@ -9,7 +9,6 @@ public class BreakableWall : MonoBehaviour
 
     [Header("Prefabs / FX")]
     [SerializeField] GameObject brokenWallPrefab; // PF_BrokenWall (with shards)
-    [SerializeField] ParticleSystem breakDustFX;  // PFX_WallBreakDust
     [SerializeField] AudioClip breakSFX;
 
     [Header("Shards Impulse")]
@@ -69,11 +68,6 @@ public class BreakableWall : MonoBehaviour
             }
         }
 
-        if (CameraShake.Instance != null)
-            CameraShake.Instance.Shake(0.2f, 0.15f);
-
-        // Dust
-        if (breakDustFX) Instantiate(breakDustFX, contactPoint, Quaternion.identity);
 
         // SFX
         if (breakSFX) AudioSource.PlayClipAtPoint(breakSFX, transform.position);

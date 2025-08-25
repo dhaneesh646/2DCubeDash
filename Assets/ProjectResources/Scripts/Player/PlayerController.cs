@@ -347,6 +347,7 @@ public class PlayerController : MonoBehaviour
 
     void PerformJump(float force)
     {
+        AudioManager.Instance.PlayEffect(SoundEffect.PlayerJump);
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // Reset y velocity
         rb.AddForce(Vector2.up * force, ForceMode2D.Impulse);
 
@@ -416,6 +417,7 @@ public class PlayerController : MonoBehaviour
 
     void StartDash()
     {
+        AudioManager.Instance.PlayEffect(SoundEffect.PlayerDash);
         isDashing = true;
         dashTrail.emitting = isDashing;
         dashEndTime = Time.time + dashTime;
